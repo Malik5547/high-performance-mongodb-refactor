@@ -79,8 +79,9 @@ Beyond optimization, I engineered a robust system for managing coach-attendee re
 
 * **Performance:** API response time reduced by **~90%** for listed endpoints.
 * **Efficiency:** Drastically reduced server bandwidth usage by serving paginated data.
-* **Architecture:** Shifted from an **O(N) linear scan** (which slows down as data grows) to an **O(1) indexed lookup**.
+* **Architecture:** Shifted from an **O(N) linear scan** (which slows down as data grows) to an **O(logN) indexed lookup**.
     * *Impact:* This ensures the query speed remains constant (0.12s) even if the database grows from 8,000 to 100,000+ records.
 * **UX:** Achieved "Instant Search" feel for end-users via backend filtering and debouncing.
 
 These are the most important technical highlights of the project. I also implemented various other features and fixed bugs across the stack during the 10-month development cycle.
+
